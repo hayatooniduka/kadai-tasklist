@@ -1,0 +1,18 @@
+<% if tasks.any? %>
+    <ul class="list-unstyled mt-2">
+        <% tasks.each do |task| %>
+            <div class="card">
+                <div class="card-header">
+                    <% if current_user == task.user %>
+                        <%= link_to task.content, task_path(task) %>
+                    <% else %>
+                        <p>Task: <%= task.content %></p>
+                    <% end %>
+                </div>
+                <div class="card-body">
+                    <p>進捗状況: <%= task.status %></p>
+                </div>
+            </div>   
+        <% end %>
+    </ul>
+<% end %>
