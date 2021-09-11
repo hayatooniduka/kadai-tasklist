@@ -10,11 +10,11 @@
     <% end %>
     <div>
         <%= f.label :content, 'Task' %>
-        <%= f.text_field :content %>
+        <%= f.text_field :content, class: 'form-control' %>
     </div>
     <div>
         <%= f.label :status, '進捗状況' %>
-        <%=f.text_field :status %>
+        <%= f.text_field :status, class: 'form-control' %>
     </div>
     
     <%=f.submit '追加' %>

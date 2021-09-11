@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-header">
                     <% if current_user == task.user %>
-                        <%= link_to task.content, task_path(task) %>
+                        <p>Task: <%= link_to task.content, task_path(task) %></p>
                     <% else %>
                         <p>Task: <%= task.content %></p>
                     <% end %>
